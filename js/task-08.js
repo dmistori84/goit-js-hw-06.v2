@@ -10,6 +10,7 @@ form.addEventListener('submit', loginForm);
 
 function loginForm(event) {
     event.preventDefault();
+
     userObj.mail = event.target.elements.email.value;
     userObj.password = event.target.elements.password.value;
     
@@ -18,8 +19,9 @@ function loginForm(event) {
     };
     if (!event.target.elements.password.value) {
         alert('Введите пароль');
-    };
-    
-    form.reset();
-    console.log('userObj', userObj);
+    }
+    else {
+        form.reset();
+        console.log('userObj', userObj);
+    }
 };
